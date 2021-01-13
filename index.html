@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <link rel="stylesheet" href="css/index_style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Live</title>
 </head>
 <body>
@@ -75,9 +74,11 @@
             
         </nav>
         <header>
-            <video class="video" src="img/MOUNT RORAIMA.mp4" autoplay muted loop></video>
+            <!--<video class="video" src="img/MOUNT RORAIMA.mp4" autoplay muted loop></video> -->
+            <img class="video" src="img/newyork.jpg"  alt="">
             <h1> Nos Conocemos?, <span>Bienvenido a mi Live</span></h1>
         </header>
+        <div class="background">
         <main>
             <h2>Musica</h2>
             <div>
@@ -86,14 +87,53 @@
             </div>
         </main>
         <section>
-            <iframe src="https://player.twitch.tv/?video=854724739&" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+            <h3>ON  <span class="blink-1">LIVE</span></h3>
+                <!-- Add a placeholder for the Twitch embed -->
+    <div id="twitch-embed">
+
+    <!-- Load the Twitch embed script -->
+    <script class="zeruz" src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+    <script class="zeruz" type="text/javascript">
+      new Twitch.Embed("twitch-embed", {
+        width: 827,
+        height: 440,
+        channel: "godzeruz",
+        // only needed if your site is also embedded on embed.example.com and othersite.example.com 
+        parent: ["embed.example.com", "othersite.example.com"]
+      });
+    </script>
+    </div>
         </section>
+        <h4>GAME <span class="h4game"> PLAYS</span></h4>
+        <div class="gameplays">
+            <div class="dota">
+                <video  src="img/Video/1erTwitch.mp4" width="500px" height="250px" muted controls></video>
+                <div class="dotatext">
+                <h5>DOTA</h5>
+                <p>Es un juego multijugador de estrategia en tiempo real, distribuido por la plataforma Steam de Valve. En este, dos equipos de cinco jugadores tienen el objetivo de destruir las estructuras rivales controlando a personajes denominados héroes. Ellos no pueden controlar las estructuras ni a las unidades que aparecen cada cierto tiempo.
+
+                Siempre se juega en un mismo mapa que tiene dos lados: Radiant y Dire, cada uno de ellos presenta ventajas y desventajas respecto a la visión, unidades neutrales y posicionamiento. Hay tres líneas donde chocan unidades no controladas: arriba, abajo y medio.</p>
+                </div>
+            </div>
+
+            <div class="gear5">
+                <video  src="img/Video/DOTA.mkv" width="500px" height="250px" muted controls></video>
+                <div class="dotatext">
+                    <h6>GEAR 5</h6>
+                    <p>Es un juego multijugador de estrategia en tiempo real, distribuido por la plataforma Steam de Valve. En este, dos equipos de cinco jugadores tienen el objetivo de destruir las estructuras rivales controlando a personajes denominados héroes. Ellos no pueden controlar las estructuras ni a las unidades que aparecen cada cierto tiempo.
+    
+                    Siempre se juega en un mismo mapa que tiene dos lados: Radiant y Dire, cada uno de ellos presenta ventajas y desventajas respecto a la visión, unidades neutrales y posicionamiento. Hay tres líneas donde chocan unidades no controladas: arriba, abajo y medio.</p>
+                    </div>
+            </div>
+        </div>
         <footer>
             <div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sapiente sunt reiciendis voluptates natus dolore saepe assumenda. Dolorem labore iure dolorum odio perspiciatis eum exercitationem reiciendis perferendis, veniam architecto? Consectetur.
             </div>
         </footer>
     </div>
+    </div>
 </body>
-
 </html>

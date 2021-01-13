@@ -14,8 +14,6 @@
                        "main main"
                        "section section"
                        "footer footer";
-                       background: rgb(72,2,77);
-                       background: linear-gradient(0deg, rgba(72,2,77,1) 29%, rgba(155,19,199,1) 100%);
 }
 
 nav{
@@ -34,12 +32,20 @@ footer{
   grid-area: footer;
 }
 
+.background{
+  background: rgb(72,2,77);
+  background: linear-gradient(0deg, rgba(72,2,77,1) 22%, rgba(0,0,0,1) 76%);
+}
+
 /* NAVEGADOR */
 
 .wrapper .header {
   z-index: 1;
-  background: rgb(0,0,0);
-  box-shadow: 5px 5px 20px #7b2cbf;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 250),
+    rgba(0, 0, 0, 260)
+  );
+  box-shadow: 2px 2px 10px black ;
   width: calc(100% - 0%);
   height: 70px;
   display: flex;
@@ -109,9 +115,9 @@ footer{
 
 .wrapper .sidebar {
   z-index: 1;
-  background: rgb(0,108,245);
-  background: linear-gradient(90deg, rgba(0,108,245,1) 0%, rgba(0,0,0,1) 35%);    
-  box-shadow: 5px 5px 20px rgb(3,4,94) ;
+  background: rgb(72,2,77);
+  background: linear-gradient(0deg, rgba(72,2,77,1) 22%, rgba(0,0,0,1) 76%);
+  box-shadow: 2px 2px 10px indigo ;
   position: fixed;
   top: 0px;
   width: 250px;
@@ -249,11 +255,15 @@ header{
   height: 300px;
   width: auto;
   padding-left: 70px;
-  
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 260)
+  );
+
 }
 .video{
-    width: 100%;
-    z-index: 1;
+    width: 95%;
+    z-index: -1;
     position: absolute;
     height: 300px;
     object-fit: cover;
@@ -261,15 +271,33 @@ header{
 header h1{
   color: white;
   text-align: center;
-  text-shadow: -10px 10px 3px  rgb(3,4,94);
+	text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
   padding: 10%;
+  font-weight: 1;
+  text-transform: capitalize;
 }
-header h1 span{
-  text-shadow: 10px 10px 3px #7b2cbf;
+header h1 span{ text-shadow:
+  0 0 5px rgb(204, 0, 255),
+  0 0 10px rgba(204, 0, 255),
+  0 0 20px rgba(204, 0, 255),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
 }
 /* Main */
 main{
-
   width: 100%;
   padding-left: 70px;
   height: 500px;
@@ -282,7 +310,8 @@ main div{
   padding-top: 50px;
 }
 main div iframe{
-  box-shadow: 5px 5px 20px 10px rgb(3,4,94) ;
+  box-shadow: 5px 5px 20px 10px indigo ;
+border-radius: 5%;
 }
 main h2{
   background: rgb(131,58,180);
@@ -293,9 +322,156 @@ main h2{
   font-size: 30px;
 }
 
+/* SECTION */
+section{
+  padding-left: 70px;
+}
+#twitch-embed{
+  display: flex;
+  justify-content: center;
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-shadow:
+  0 0 5px rgba(0,178,255,1),
+  0 0 10px rgba(0,178,255,1),
+  0 0 20px rgba(0,178,255,1),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+  font-size: 50px;
+}
+h3 span{
+  text-shadow:
+  0 0 5px rgb(204, 0, 255),
+  0 0 10px rgba(204, 0, 255),
+  0 0 20px rgba(204, 0, 255),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+}
+.blink-1{animation:blink-1 3s infinite both}
+@keyframes blink-1{0%,50%,100%{opacity:1}25%,75%{opacity:0}}  
+ /* GAMEPLAYS */
+ h4{
+   padding-left: 70px;
+   color: white;
+   display: flex;
+   justify-content: center;
+   margin-top: 70px;
+   font-size: 50px;
+   text-shadow:
+   0 0 5px rgba(0,178,255,1),
+   0 0 10px rgba(0,178,255,1),
+   0 0 20px rgba(0,178,255,1),
+   0 0 40px rgba(38,104,127,1),
+   0 0 80px rgba(38,104,127,1),
+   0 0 90px rgba(38,104,127,1),
+   0 0 100px rgba(38,104,127,1),
+   0 0 140px rgba(38,104,127,1),
+   0 0 180px rgba(38,104,127,1);
+ }
+ .h4game{
+  text-shadow:
+  0 0 5px rgb(204, 0, 255),
+  0 0 10px rgba(204, 0, 255),
+  0 0 20px rgba(204, 0, 255),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+ }
+ 
+.dota{
+  margin: 100px;
+  padding-left: 70px;
+  background-color: darkred;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0px 20px 25px 0px black ;
+  height: 300px;
+  display: flex;
+  width: 90%;
+}
+.dota video{
+  box-shadow: 0px 3px 20px 5px red ;
+}
+.dotatext{
+  margin: 10px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  width: 100%;
+}
+h5{
+  text-align: center;
+  color: black;
+  text-shadow:
+  0 0 5px rgb(255, 0, 0),
+  0 0 10px rgb(255, 0, 0),
+  0 0 20px rgb(255, 0, 0),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+  font-size: 30px;
+}
+.dotatext p{
+  text-align: center;
+  color: white;
+
+}
+.gear5{
+  margin: 100px;
+  padding-left: 70px;
+  background-color: darkgoldenrod;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0px 20px 25px 0px black ;
+  height: 300px;
+  display: flex;
+  width: 90%;
+  justify-content: right;
+  flex-direction: row-reverse;
+}
+.gear5 video{
+  box-shadow: 0px 3px 20px 5px rgb(255, 183, 0) ;
+}
+h6{
+  text-align: center;
+  color: black;
+  text-shadow:
+  0 0 5px rgb(255, 183, 0),
+  0 0 10px rgb(255, 183, 0),
+  0 0 20px rgb(255, 183, 0),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+  font-size: 30px;
+}
+
 /* FOOTER */
 
 footer{
-  height: auto;
+  height: 200px;
+  background: black;
+  margin-top: 30px;
 
 }

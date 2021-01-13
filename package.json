@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css":"node-sass --include-path scss scss/index_style.scss css/index_style.css",
-    "watch-css":"nodemon -e scss -x \"npm run build-css\""
+    "build-css": "node-sass --include-path scss scss/index_style.scss css/index_style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "all-animation": "^2.1.3"
   }
 }
