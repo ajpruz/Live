@@ -4,86 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <link rel="stylesheet" href="css/index_style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
     <title>Live</title>
 </head>
 <body>
     <div id="content">
-        <nav class="wrapper collapse">
-            <div class="header">
-                <div class="header-menu">
-                    <a class="logo" href="#"><span class="circulo"></span><p class="live">LIVE</p></a>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-search"></i></a></li>
-                        <li><a href="#"><i class="fas fa-bell"></i></a></li>
-                        <li><a href="#"><i class="fas fa-power-off"></i></a></li>
-                     </ul>
-                </div>
-            </div>
-
-            <div class="sidebar">
-                <div class="sidebar-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <div class="sidebar-menu">
-                    <center class="profile">
-                        <img src="img/WhatsApp Image 2020-12-27 at 1.59.32 AM.jpeg" alt="">
-                        <p>Alexis</p>
-                    </center>
-                    <li class="item">
-                        <a href="#" class="menu-btn">
-                            <i class="fas fa-desktop"></i><span>Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="item" id="profile">
-                        <a href="#profile" class="menu-btn">
-                            <i class="fas fa-user-circle"></i><span>profile<i class="fas fa-chevron-down drop-down"></i></span>
-                        </a>
-                        <div class="sub-menu">
-                            <a href="#"><i class="fas fa-image"></i><span>Picture</span></a>
-                            <a href="#"><i class="fas fa-address-card"></i><span>Info</span></a>
-                        </div>
-                    </li>
-                    <li class="item" id="messages">
-                        <a href="#messages" class="menu-btn">
-                            <i class="fas fa-envelope"></i><span>Messages<i class="fas fa-chevron-down drop-down"></i></span>
-                        </a>
-                        <div class="sub-menu">
-                            <a href="#"><i class="fas fa-envelope"></i><span>New</span></a>
-                            <a href="#"><i class="fas fa-envelope-square"></i><span>Sent</span></a>
-                            <a href="#"><i class="fas fa-exclamation-circle"></i><span>Spam</span></a>
-                        </div>
-                    </li>
-                    <li class="item" id="settings">
-                        <a href="#settings" class="menu-btn">
-                            <i class="fas fa-cog"></i><span>Settings<i class="fas fa-chevron-down drop-down"></i></span>
-                        </a>
-                        <div class="sub-menu">
-                            <a href="#"><i class="fas fa-lock"></i><span>Password</span></a>
-                            <a href="#"><i class="fas fa-language"></i><span>language</span></a>
-                        </div>
-                    </li>
-                    <li class="item">
-                        <a href="#" class="menu-btn">
-                            <i class="fas fa-info-circle"></i><span>About</span>
-                        </a>
-                    </li>
-                </div>
-            </div>
-
-            
-        </nav>
+        <nav>
+            <ul class="menu">
+              <a class="logo" href="index.html"><span class="circulo"></span><p class="live">LIVE</p></a>
+              <li class="item"><a href="index.html">Home</a></li>
+              <li class="item"><a href="/pages/about.html">About</a></li>
+              <li class="item"><a href="/pages/gameplays.html">Gameplays</a></li>
+              <li class="item"><a href="/pages/music.html">Music</a></li>
+              <li class="item"><a href="/pages/blog.html">Blog</a></li>
+              <li class="item"><a href="/pages/contact.html">Contact</a>
+              </li>
+              <li class="item button"><a href="#">Log In</a></li>
+              <li class="item button secondary"><a href="#">Sign Up</a></li>
+              <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+          </nav>
         <header>
             <!--<video class="video" src="img/MOUNT RORAIMA.mp4" autoplay muted loop></video> -->
             <img class="video" src="img/newyork.jpg"  alt="">
             <h1> Nos Conocemos?, <span>Bienvenido a mi Live</span></h1>
         </header>
-        <div class="background">
         <main>
-            <h2>Musica</h2>
+            <h2>Mu<span>sica</span></h2>
             <div>
-                <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO4bpckc" width="230" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                <iframe src="https://open.spotify.com/embed/playlist/3Ad56nMoGCUIScJeQQ5zKz" width="230" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe data-aos="zoom-in" src="https://open.spotify.com/embed/playlist/37i9dQZF1DZ06evO4bpckc" width="230" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe data-aos="zoom-in" src="https://open.spotify.com/embed/playlist/3Ad56nMoGCUIScJeQQ5zKz" width="230" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
             </div>
         </main>
         <section>
@@ -106,9 +61,9 @@
     </script>
     </div>
         </section>
-        <h4>GAME <span class="h4game"> PLAYS</span></h4>
         <div class="gameplays">
-            <div class="dota">
+            <h4>GAME <span class="h4game"> PLAYS</span></h4>
+            <div data-aos="zoom-out-right" class="dota">
                 <video  src="img/Video/1erTwitch.mp4" width="500px" height="250px" muted controls></video>
                 <div class="dotatext">
                 <h5>DOTA</h5>
@@ -118,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="gear5">
+            <div data-aos="zoom-out-left" class="gear5">
                 <video  src="img/Video/DOTA.mkv" width="500px" height="250px" muted controls></video>
                 <div class="dotatext">
                     <h6>GEAR 5</h6>
@@ -128,12 +83,58 @@
                     </div>
             </div>
         </div>
-        <footer>
-            <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi sapiente sunt reiciendis voluptates natus dolore saepe assumenda. Dolorem labore iure dolorum odio perspiciatis eum exercitationem reiciendis perferendis, veniam architecto? Consectetur.
-            </div>
-        </footer>
-    </div>
+		<footer class="footer-distributed">
+
+			<div class="footer-left">
+                <a class="logo" href="index.html"><span class="circulo"></span><p class="live">LIVE</p></a>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					|
+					<a href="#">Blog</a>
+					|
+					<a href="#">About</a>
+					|
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© Alexis Portillo</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span> Carrera 41 #57Sur-01 - Canela Apartamentos - Apto. 2006</span>
+						Colombia, Antioquia Sabaneta - 50055</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+57 321-6962983</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:alexisjpruz@gmail.com">alexisjpruz@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About Live</span>
+					Te ofresco una vista de mis trabajos, estudios y entretenimientos.</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"> </i> </a>
+					<a href="#"><i class="fa fa-twitter"></i> </a>
+					<a href="#"><i class="fa fa-instagram"></i> </a>
+					<a href="#"><i class="fa fa-linkedin"></i> </a>
+					<a href="#"><i class="fa fa-youtube"></i> </a>
+				</div>
+			</div>
+		</footer>
     </div>
 </body>
+<script>
+    AOS.init();
+  </script>
+<script src="/js/style.js"></script>
+</script>
 </html>

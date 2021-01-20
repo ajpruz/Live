@@ -1,0 +1,617 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+#content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  background: rgb(72,2,77);
+  background: linear-gradient(0deg, rgba(72,2,77,1) 22%, rgba(0,0,0,1) 76%);
+}
+
+header{
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+main{
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+section{
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.gameplays{
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+footer{
+  grid-column: span 3;
+}
+
+
+/* NAVEGADOR */
+nav {
+  background: rgb(0, 0, 0);
+  padding: 5px 20px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.logo a:hover {
+  text-decoration: none;
+}
+.menu li {
+  font-size: 16px;
+  padding: 15px 5px;
+  white-space: nowrap;
+}
+.toggle a {
+  font-size: 20px;
+}
+.button.secondary {
+  border-bottom: 1px #444 solid;
+}
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle {
+  order: 1;
+}
+.item.button {
+  order: 2;
+}
+.item {
+  width: 100%;
+  text-align: center;
+  order: 3;
+  display: none;
+}
+.item.active {
+  display: block;
+}
+/* Tablet menu */
+@media all and (min-width: 654px) {
+  .menu {
+    justify-content: center;
+  }
+  .toggle {
+    flex: 1;
+    text-align: right;
+  }
+  .item.button {
+    width: auto;
+    order: 1;
+    display: block;
+  }
+  .toggle {
+    order: 2;
+  }
+  .button.secondary {
+    border: 0;
+  }
+  .button a {
+    padding: 7.5px 15px;
+    background: rgb(136, 22, 189);
+    border: 1px rgb(136, 22, 189) solid;
+  }
+  .button.secondary a {
+    background: transparent;
+  }
+  .button a:hover {
+    text-decoration: none;
+  }
+  .button:not(.secondary) a:hover {
+    background: #630081;
+    border-color: #630081;
+  }
+  .button.secondary a:hover {
+    color: #ddd;
+  }
+}
+/* Desktop menu */
+@media all and (min-width: 900px) {
+  .item {
+    display: block;
+    width: auto;
+  }
+  .toggle {
+    display: none;
+  }
+  .item {
+    order: 1;
+  }
+  .button {
+    order: 2;
+  }
+  .menu li {
+    padding: 15px 10px;
+  }
+  .menu li.button {
+    padding-right: 0;
+  }
+}
+
+
+/*Logo de LIVE */
+
+.live{
+    margin-left: 80px;
+    font-weight: 500;
+    font-size: large;
+}
+
+.circulo {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: indigo;
+    position: absolute;
+    margin: 1px;
+    padding: 3%;
+    animation: blinker 1.5s linear infinite;
+    justify-self: start;
+    margin-left: 60px;
+}
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0; } }
+
+.logo{
+    color: #fff;
+    position: relative;
+}
+
+/* HEADER */
+header{
+  height: 400px;
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 260)
+  );
+
+}
+.video{
+    width: 100%;
+    position: absolute;
+    height: 300px;
+    object-fit: cover;
+    display: flex;
+    z-index: -1;
+  }
+header h1{
+  color: white;
+	text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+  font-weight: 1;
+  text-transform: capitalize;
+  justify-content: center;
+  text-align: center;
+  margin: 50px;
+  margin-left: 70px;
+}
+
+
+header h1 span{ text-shadow:
+  0 0 5px rgb(204, 0, 255),
+  0 0 10px rgba(204, 0, 255),
+  0 0 20px rgba(204, 0, 255),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+}
+/* Main */
+main{
+  width: 100%;
+  height: 500px;
+  
+}
+main div{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-top: 50px;
+}
+main div iframe{
+  box-shadow: 5px 5px 20px 10px indigo ;
+border-radius: 5%;
+}
+main h2{
+  color: white;
+	text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+  -webkit-background-clip: text;
+  text-align: center;
+  font-size: 50px;
+}
+h2 span{
+  text-shadow:
+  0 0 5px rgb(204, 0, 255),
+  0 0 10px rgba(204, 0, 255),
+  0 0 20px rgba(204, 0, 255),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+}
+
+/* SECTION */
+#twitch-embed{
+  display: flex;
+  justify-content: center;
+}
+
+h3{
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-shadow:
+  0 0 5px rgba(0,178,255,1),
+  0 0 10px rgba(0,178,255,1),
+  0 0 20px rgba(0,178,255,1),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+  font-size: 50px;
+}
+h3 span{
+  text-shadow:
+  0 0 5px rgb(204, 0, 255),
+  0 0 10px rgba(204, 0, 255),
+  0 0 20px rgba(204, 0, 255),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+}
+.blink-1{animation:blink-1 3s infinite both}
+@keyframes blink-1{0%,50%,100%{opacity:1}25%,75%{opacity:0}}  
+ /* GAMEPLAYS */
+ h4{
+   color: white;
+   display: flex;
+   justify-content: center;
+   margin-top: 70px;
+   font-size: 50px;
+   text-shadow:
+   0 0 5px rgba(0,178,255,1),
+   0 0 10px rgba(0,178,255,1),
+   0 0 20px rgba(0,178,255,1),
+   0 0 40px rgba(38,104,127,1),
+   0 0 80px rgba(38,104,127,1),
+   0 0 90px rgba(38,104,127,1),
+   0 0 100px rgba(38,104,127,1),
+   0 0 140px rgba(38,104,127,1),
+   0 0 180px rgba(38,104,127,1);
+ }
+ .h4game{
+  text-shadow:
+  0 0 5px rgb(204, 0, 255),
+  0 0 10px rgba(204, 0, 255),
+  0 0 20px rgba(204, 0, 255),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+ }
+ 
+.dota{
+  margin: 100px;
+  background-color: darkred;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0px 20px 25px 0px black ;
+  /* height: 300px; */
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90%;
+}
+.dota video{
+  box-shadow: 0px 3px 20px 5px red ;
+}
+.dotatext{
+  margin: 10px;
+  /* height: 200px; */
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  /* width: 100%; */
+}
+h5{
+  text-align: center;
+  color: black;
+  text-shadow:
+  0 0 5px rgb(255, 0, 0),
+  0 0 10px rgb(255, 0, 0),
+  0 0 20px rgb(255, 0, 0),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+  font-size: 30px;
+}
+.dotatext p{
+  text-align: center;
+  color: white;
+
+}
+
+.gear5{
+  margin: 100px;
+  background-color: darkgoldenrod;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0px 20px 25px 0px black ;
+  /* height: 300px; */
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  flex-flow: row-reverse nowrap;
+}
+.gear5 video{
+  box-shadow: 0px 3px 20px 5px rgb(255, 183, 0) ;
+}
+h6{
+  text-align: center;
+  color: black;
+  text-shadow:
+  0 0 5px rgb(255, 183, 0),
+  0 0 10px rgb(255, 183, 0),
+  0 0 20px rgb(255, 183, 0),
+  0 0 40px rgba(38,104,127,1),
+  0 0 80px rgba(38,104,127,1),
+  0 0 90px rgba(38,104,127,1),
+  0 0 100px rgba(38,104,127,1),
+  0 0 140px rgba(38,104,127,1),
+  0 0 180px rgba(38,104,127,1);
+  font-size: 30px;
+}
+
+/* FOOTER */
+
+/* The footer is fixed to the bottom of the page */
+
+footer{
+	bottom: 0;
+}
+
+@media (max-height:800px){
+	footer { position: static; }
+	header { padding-top:40px; }
+}
+
+
+.footer-distributed{
+	background-color: #2c292f;
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 50px 50px 60px 50px;
+	margin-top: 80px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	width: 30%;
+}
+
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+/* The company logo */
+
+.footer-distributed .footer-left img{
+	width: 30%;
+}
+
+.footer-distributed h3 span{
+	color:  #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+	width: 35%;
+}
+
+
+.footer-distributed .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+	width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+
+@media (max-width: 880px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-distributed .footer-center i{
+		margin-left: 0;
+	}
+
+}
+
+@media screen and (max-width: 992px){
+  #content{
+    grid-column: 1 / -1; 
+  }
+  .dota{
+    display: flex;
+    flex-direction: column;
+  }
+  .gear5{
+    display: flex;
+    flex-direction: column;
+  }
+}
